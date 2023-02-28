@@ -1,0 +1,69 @@
+/* !!! подключить шрифт для h2 font-family: 'Gilroy-Bold'; */
+/* !!! подключить шрифт для основного текста font-family: 'Gilroy-Regular' */
+
+
+/* !! подумать, как сделать так, чтоб background был на всю длину экрана , а не ширину секции, как в макете */
+.aboutUs {
+	/* max-height: 540px; */
+	/* ширина макета: 1920px; */
+	background: url('../img/about_us/bg.png') center center/cover no-repeat;
+	background-color: #FAFAFA;
+	position: relative;
+}
+
+.aboutUs .vector1 {
+	position: absolute;
+	border: 2px solid #F0F0F0;
+	transform: rotate(2.09deg);
+}
+
+.aboutUs .vector2 {
+	position: absolute;
+	border: 2px solid #F0F0F0;
+	transform: matrix(1, 0.04, 0.04, -1, 0, 0);
+}
+
+.aboutUs .row {
+	display: flex;
+    align-items: center;
+}
+.aboutUs .aboutUs_text {
+	/* margin: 127px 0 124px 0; */
+}
+
+.aboutUs .text {
+	margin-bottom: 35px;
+	color: #666666;
+	width: 515px;
+	font-family: 'Gilroy-Regular';
+	font-size: 16px;
+	line-height: 150%;
+	text-align: justify;
+}
+
+/* повторяющийся элемент на странице */
+.subtitle {
+	margin-bottom: 20px;
+	color: #000000;
+	width: 409px;
+	font-family: 'Gilroy-Bold';
+	font-size: 45px;
+	line-height: 53px;
+}
+
+/* повторяющийся элемент на странице */
+button {
+	width: 140px;
+	height: 50px;
+	background-color: #F25822;
+	box-shadow: 4px 4px 8px rgba(242, 88, 34, 0.2);
+	border: none;
+	border-radius: 50px;
+	color: #FFFFFF;
+	font-family: 'Gilroy-Bold';
+	font-size: 15px;
+	line-height: 18px;
+}
+
+
+
