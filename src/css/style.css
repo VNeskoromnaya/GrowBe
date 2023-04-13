@@ -1,41 +1,44 @@
-/* !!! подключить шрифт для h2 font-family: 'Gilroy-Bold'; */
-/* !!! подключить шрифт для основного текста font-family: 'Gilroy-Regular' */
-/* !!! подключить шрифт для навигации font-family: 'Gilroy-SemiBold' и font-family: 'Gilroy-Medium'  */
+/* TODO: подключить шрифт для h2 font-family: 'Gilroy-Bold'; */
+/* TODO: подключить шрифт для основного текста font-family: 'Gilroy-Regular' */
+/* TODO: подключить шрифт для навигации font-family: 'Gilroy-SemiBold' и font-family: 'Gilroy-Medium'  */
 
 
-/* ! подумать над тем, чтоб сделать меню fixed или еще как-то обыграть */
-.header {
+/* NOTE: подумать над тем, чтоб сделать меню fixed или еще как-то обыграть */
+
+/* HOME PAGE block -- */
+.homePage .header {
 	margin-top: 40px;
 }
 
-.header .container {
+.homePage .header .header_wrp {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
 
-.header .logo_wrp img {
+.homePage .header .logo_wrp img {
 	max-width: 100%;
 }
 
-/* убрать за ненадобностью, если не будет использоваться */
-.header .header_nav {
-}
+/* NOTE: убрать за ненадобностью, если не будет использоваться */
+.homePage .header .header_nav {}
 
-.header .header_nav .header_menu {
+.homePage .header .header_nav .header_menu {
 	display: flex;
 	list-style-type: none;
 	align-items: center;
 	margin-bottom: 0px;
 }
 
-.header .header_nav .header_menu li {
+.homePage .header .header_nav .header_menu li {
 	margin-right: 34px;
 }
 
-/* подумать */
-.header .header_nav .header_menu li:last-child a {
+.homePage .header .header_nav .header_menu li:last-child {
 	margin-right: 0px;
+}
+
+.homePage .header .header_nav .header_menu li:last-child a {
 	display: flex;
 	width: 120px;
 	height: 40px;
@@ -50,30 +53,66 @@
 	justify-content: center;
 }
 
-/* подумать над эффектом при наведении на него мышкой */
-.header .header_nav .header_menu li:last-child a:hover {
-}
+/* NOTE: подумать над эффектом при наведении на него мышкой - последний элемент кнопка в навигации */
+.homePage .header .header_nav .header_menu li:last-child a:hover {}
 
-.header .header_nav .header_menu li > a {
+.homePage .header .header_nav .header_menu li>a {
 	color: rgba(0, 0, 0, 1);
 	font-family: 'Gilroy-Medium';
 	font-size: 14px;
 	line-height: 16px;
 }
 
-/*! когда буду делать JS, изменить поведение - удалять активный с предыдущей ссылки и добавлять на выбранную */
-.header .header_nav .header_menu li .active {
+/* TODO: когда буду делать JS, изменить поведение - удалять активный с предыдущей ссылки и добавлять на выбранную */
+.homePage .header .header_nav .header_menu li .active {
 	color: #F25822;
 	font-family: 'Gilroy-SemiBold';
 	font-weight: bold;
 }
 
-.header .header_nav .header_menu li > a:hover {
+.homePage .header .header_nav .header_menu li>a:hover {
 	color: #F25822;
 	font-family: 'Gilroy-SemiBold';
 	font-weight: bold;
 	text-decoration: none;
 }
+
+
+.home .home_wrp {
+	margin-top: 143px;
+	width: 543px;
+}
+
+.home .home_wrp h1 {
+	font-family: 'Gilroy-Bold';
+	font-size: 60px;
+	line-height: 70px;
+	color: #000000;
+}
+
+/* TODO: придумать, как сам элипс сдвинуть левее на 21px, но само слово Marketing должно быть на месте */
+/* NOTE: возможно элипс сделать отдельной картинкой или через свойство background */
+.home .home_wrp h1 .ellipse {
+	position: relative;
+}
+
+.home .home_wrp h1 .ellipse::after {
+	display: block;
+	content: '';
+	box-sizing: border-box;
+	border: 1px solid #F25822;
+	border-radius: 50%;
+	width: calc(100% + 42px);
+	height: calc(100% + 10px);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	/* height: 76px; */
+	/* background: url('../icons/ellipse.svg') no-repeat; */
+}
+
+/* -- end HOME PAGE block */
 
 .aboutUs {
 	background: url('../img/about_us/bg.png') center center/cover;
@@ -87,7 +126,7 @@
 
 .aboutUs .row {
 	display: flex;
-    align-items: center;
+	align-items: center;
 }
 
 .aboutUs .text {
@@ -149,8 +188,8 @@ button {
 	width: 70px;
 	height: 70px;
 	display: flex;
-    align-items: center;
-    justify-content: center;
+	align-items: center;
+	justify-content: center;
 	border-radius: 15px;
 	margin-bottom: 25px;
 }
@@ -193,11 +232,3 @@ button {
 .features .features_wrapper .features_item .features_more:hover {
 	color: #666666;
 }
-
-
-
-
-
-
-
-
